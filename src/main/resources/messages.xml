@@ -1,0 +1,250 @@
+<messages>
+    <message id="ENGAG1">
+        <text lang="fa">کسی نمیتواند به آسانی من را از کار کردن در شرکت (BEL) منصرف کند."</text>
+        <text lang="en">It would take a lot to get me to leave Bel.</text>
+    </message>
+    <message id="ENGAG2">
+        <text lang="fa">من قطعا شرکت بل (BEl) را به دوستانی که جویای کار هستند توصیه میکنم.</text>
+        <text lang="en">I would not hesitate to recommend Bel to a friend seeking employment</text>
+    </message>
+    <message id="ENGAG3">
+        <text lang="fa">محیط کار در شرکت بل (BEL) منرا تشویق میکند که بهترین عملکرد را از خود نشان بدهم.</text>
+        <text lang="en">Bel motivates me to do my utmost every day</text>
+    </message>
+    <message id="ENGAG4">
+        <text lang="fa">من به ندرت به این فکر میکنم که شرکت بل (BEL) را ترک کنم و در جای دیگر کار کنم.</text>
+        <text lang="en">I rarely think about leaving Bel to work somewhere else</text>
+    </message>
+    <message id="ENGAG5">
+        <text lang="fa">هرگاه موقعیتی دست بدهد، من کار کردن در این شرکت را به دیگران توصیه میکنم.</text>
+        <text lang="en">If the opportunity arises, I tell others great things about working here </text>
+    </message>
+    <message id="ENGAG6">
+        <text lang="fa">محیط کار در شرکت بل (BEL) من را تشویق میکند که خوب و موثر کار کنم.</text>
+        <text lang="en">Bel motivates me to contribute more than is normally required in my job</text>
+    </message>
+    <message id="BENEFIT1">
+        <text lang="fa">در مجموع، پکیج مزایای من (پکیج پزشکی، بیمه عمر، ...) و خدمات نیاز من (و خانواده ام) را تامین میکند.</text>
+        <text lang="en">Overall, my benefit plan (medical plan, supplimentary insurance …) and services meets my (and my family’s) needs well</text>
+    </message>
+    <message id="CAREER1">
+        <text lang="fa">من میتوانم به آینده شغلی خود در شرکت بل (BEL) امیدوار باشم.</text>
+        <text lang="en">My future career opportunities at Bel are promising</text>
+    </message>
+    <message id="CAREER2">
+        <text lang="fa">من فکر میکنم شرکت بل (BEL) به نحوی منصفانه کارمندانش را ارتقا میدهد</text>
+        <text lang="en">I think the way Bel promotes people is </text>
+    </message>
+    <message id="CAREER3">
+        <text lang="fa">در شرکت بل (BEL) روزانه فرصت کافی برای رشد فردی یا انتقال بین واحدهای مختلف وجود دارد تاکارمند بتواند سطح حرفه ای خود را ارتقا بدهد.</text>
+        <text lang="en">Bel provides opportunity for its employees to develop or to move between different functions/departments to enhance their career</text>
+    </message>
+    <message id="CAREER4">
+        <text lang="fa">در شرکت بل (BEL) فرصت¬های شغلی مختلف را در اختیار کارمندانش قرار میدهد.</text>
+        <text lang="en">The information I need is widely shared and available</text>
+    </message>
+    <message id="COMMUNICATION1">
+        <text lang="fa">اطلاعاتی که من برای انجام کارم نیاز دارم در دسترس است</text>
+        <text lang="en">The information I need is widely shared and available</text>
+    </message>
+    <message id="COWORKER1">
+        <text lang="fa"> در محل کار من اعتماد و احترام متقابل وجود دارد</text>
+        <text lang="en">I see trust and mutual respect in our workplace</text>
+    </message>
+    <message id="COWORKER2">
+        <text lang="fa">همکاران من دانش و معلومات خود و روش های کارآمد را با یکدیگر در میان می گذارند</text>
+        <text lang="en">My colleagues share best practice and job knowledge with each other</text>
+    </message>
+    <message id="COWORKER3">
+        <text lang="fa">در شرکت بل، همه برای رسیدن به اهداف با هم همکاری دارند</text>
+        <text lang="en">My co-workers work together to achieve our goals</text>
+    </message>
+    <message id="DIVERSITY1">
+        <text lang="fa">ما محیط کاری داریم که در آن همه سطح از افراد ورای سن، جنسیت، ویژگی جسمی و سطح سازمانی آزاد و مورد پذبرش هستند</text>
+        <text lang="en">We have a work environment that is open and accepts individual differences (age, gender, handicap, hierarchical level)</text>
+    </message>
+    <message id="LEARNING1">
+        <text lang="fa">شرکت بل (BEL) به طور جدی از آموزش و توسعه کارمندان حمایت می کند. </text>
+        <text lang="en">Bel strongly supports the learning and development of its employees</text>
+    </message>
+    <message id="LEARNING2">
+        <text lang="fa">من در مورد فرصتهای آموزشی اطالعات کافی دریافت می کنم.</text>
+        <text lang="en">I receive information about which training opportunities are available to me</text>
+    </message>
+    <message id="LEARNING3">
+        <text lang="fa"> شرکت بل موقعیت های آموزشی که برای توسعه حرفه ای کارمندان فراهم می کند.</text>
+        <text lang="en">I have access to the training I need for my professional development</text>
+    </message>
+    <message id="LOCAL_LEADERSHIP1">
+        <text lang="fa">من شواهد قوی می بینم مبنی بر اینکه مدیریت ارشد بومی بل به شکلی موثر شرکت را رهبری می کنند.</text>
+        <text lang="en">I see strong evidence that Bel's local senior leadership is able to effectively lead the company</text>
+    </message>
+    <message id="LOCAL_LEADERSHIP2">
+        <text lang="fa">مدیران ارشد شرکت بل روزانه رویکرد و اهداف آینده را برای کارمندان توضیح می دهند و اطالع رسانی می کنند.</text>
+        <text lang="en">Local senior leadership provides clear direction for the future</text>
+    </message>
+    <message id="LOCAL_LEADERSHIP3">
+        <text lang="fa">مدیران ارشد شرکت بل روزانه در دسترس و نزدیک به کارمندان هستند و تماس و گفتگو با آنها امکان پذیر است</text>
+        <text lang="en">Local senior leadership is appropriately visible and accessible to employees</text>
+    </message>
+    <message id="MANAGER1">
+        <text lang="fa">مدیرم از من حمایت می کند تا در کارم به موفقیت برسم.</text>
+        <text lang="en">My manager provides the support I need to succeed</text>
+    </message>
+    <message id="MANAGER2">
+        <text lang="fa">مدیر من رابطه ای بر اساس اعتماد با ما برقرار میکند.</text>
+        <text lang="en">My manager maintains a relationship of trust with me</text>
+    </message>
+    <message id="MANAGER3">
+        <text lang="fa">مدیر من وقتی از تلاش و نتیجه کار من راضی است به من میگوید.</text>
+        <text lang="en">My manager tells me when he is satisfied with my efforts and results</text>
+    </message>
+    <message id="MANAGER4">
+        <text lang="fa">مدیرم برای بهبود و پیشرفت کارم با من گفتگو می کند و بازخورد می دهد.</text>
+        <text lang="en">My manager provides me with feedback which helps me to improve myself</text>
+    </message>
+    <message id="MANAGER5">
+        <text lang="fa">مدیر من برای بهبود عملکرد و استعداد حرفه ایم مرا راهنمایی می کند.</text>
+        <text lang="en">My manager provides important guidance on my potential professional evolution</text>
+    </message>
+    <message id="MANAGER6">
+        <text lang="fa">مدیر من جو و انرژی مثبتی را در تیم ایجاد می کند.</text>
+        <text lang="en">My manager develops a positive team atmosphere</text>
+    </message>
+    <message id="PERFORMANCE1">
+        <text lang="fa">من درک می کنم که چگونه اهداف فردی من در کارم با اهداف گروه بل  (BEL) مرتبط است.</text>
+        <text lang="en">I understand how my personal objectives are linked to Bel's goals</text>
+    </message>
+    <message id="PERFORMANCE2">
+        <text lang="fa">جلسه ارزیابی عملکرد من برای توسعه شغلی بمن کمک می کند.</text>
+        <text lang="en">My appraisal interview helps me to improve</text>
+    </message>
+    <message id="PERFORMANCE3">
+        <text lang="fa">شرح وظایف من تدوین شده و من می دانم که در کارم از من چه انتظاری دارند.</text>
+        <text lang="en">I know what is expected of me at work</text>
+    </message>
+    <message id="ORGANIZATION1">
+        <text lang="fa">من افتخار می کنم که در این شرکت مشغول بکار هستم.</text>
+        <text lang="en">I am proud to be part of this organization</text>
+    </message>
+    <message id="ORGANIZATION2">
+        <text lang="fa">در این ناحیه شرکت بل (BEL)  یکی ازبهترین شرکت ها برای کار کردن است.</text>
+        <text lang="en">Bel is considered as one of the best places to work in my area</text>
+    </message>
+    <message id="ORGANIZATION3">
+        <text lang="fa">اطمینان دارم که شرکت بل (BEL) شرکتی است که به بهترین نحو مسئولیت پذیر (در مقابل جامعه، قوانین کار، محیط زیست، امور خیریه و ...) است.</text>
+        <text lang="en">I am sure that Bel does its best to be a responsible company (acting for the society, reducing its environmental impact, etc.).</text>
+    </message>
+    <message id="ORGANIZATION4">
+        <text lang="fa"></text>
+        <text lang="en">I appreciate Bel's culture, its mentality and its values</text>
+    </message>
+    <message id="PAY1">
+        <text lang="fa">من برای مشارکتی که در رسیدن به موفقیت بل دارم منصفانه حقوق می گیرم.</text>
+        <text lang="en">I am paid fairly for the contributions I make to Bel’s success</text>
+    </message>
+    <message id="PAY2">
+        <text lang="fa">در مقایسه با کارکنان مشابه من در دیگر شرکت ها، من منصفانه حقوق می گیرم</text>
+        <text lang="en">Compared with other employees in the same role at Bel, I am fairly paid</text>
+    </message>
+    <message id="PAY3">
+        <text lang="fa">من اظلاعات مورد نیاز در رابه با حقوق و مزایای خود را دارم. (بسته پزشکی، بیمه عمر و ...)</text>
+        <text lang="en">I receive the information I need to understand calculations related to compensation and benefits ( supplimentary insurance …)</text>
+    </message>
+    <message id="PAY4">
+        <text lang="fa">وقتی شرکت بل در کار خود موفق است، من سهم خودم در موفقیت را به شکلی مناسب دریافت می کنم.</text>
+        <text lang="en">When Bel does well, I appropriately share in its financial success</text>
+    </message>
+    <message id="PAY5">
+        <text lang="fa">برای بهترین بازدهی، ابزارهای مورد نیاز در اختیار من است.</text>
+        <text lang="en">Compared with other places I might work, I feel I am paid appropriately</text>
+    </message>
+    <message id="RESOURCES1">
+        <text lang="fa"></text>
+        <text lang="en">I have what I need to be as efficient as possible</text>
+    </message>
+    <message id="SAFTY1">
+        <text lang="fa">یمنی و امنیت محل کار در شرکت بل )BEL )موضوعی بسیار مهم می باشد</text>
+        <text lang="en">Workplace safety and security are considered important at Bel</text>
+    </message>
+    <message id="SENIOR_LEADERSHIP1">
+        <text lang="fa">من شواهد قوی می بینم مبنی بر اینکه مدیریت ارشد گروه بل به شکلی موثر شرکت را رهبری می کنند</text>
+        <text lang="en">I see strong evidence that Bel Group's senior leadership is able to effectively lead the company.</text>
+    </message>
+    <message id="SENIOR_LEADERSHIP2">
+        <text lang="fa">مدیریت ارشد گروه بل، به وضوح نشان می دهند که کارکنان نقشی حیاتی در موفقیت سازمان دارند</text>
+        <text lang="en">Bel Group's senior leadership make it clear that employees are critical to the organization’s success</text>
+    </message>
+    <message id="SENIOR_LEADERSHIP3">
+        <text lang="fa">مدیریت ارشد گروه بل، مسیری مشخصی بزای آینده فراهم می کنند.</text>
+        <text lang="en">Bel Group's senior leadership provides clear direction for the future</text>
+    </message>
+    <message id="VALUING1">
+        <text lang="fa">از من در مقابل مشارکت و دستاوردهایم تا حد ممکن به طرق مختلف مادی و غیرمادی قدردانی میشود. </text>
+        <text lang="en">I receive appropriate recognition (beyond my pay and benefits) for my contributions and accomplishments (quantitative and qualit</text>
+    </message>
+    <message id="VALUING2">
+        <text lang="fa">شرکت بل روزانه علاوه بر نتایج کاری کارمندان، به رفتار و اخلاق آنها نیز اهمیت میدهد.</text>
+        <text lang="en">Beyond the results, Bel cares about employees' behaviors</text>
+    </message>
+    <message id="VALUING3">
+        <text lang="fa">به عنوان یک شخص ارزشمند با من رفتار میشود.</text>
+        <text lang="en">I am treated like a valued member of Be</text>
+    </message>
+    <message id="VALUING4">
+        <text lang="fa">شرکت بل روزانه به رفاه کارمندان خود اهمیت میدهد.</text>
+        <text lang="en">Bel concretely looks after the wellbeing of its employees</text>
+    </message>
+    <message id="VALUING5">
+        <text lang="fa">نظرات و پیشنهادات کارمندان در فرایند تصمیم گیری سازمان تاثیرگذار است.</text>
+        <text lang="en">Opinions and suggestions of employees are given significant consideration in the organization’s decision-making process</text>
+    </message>
+    <message id="WORK_BALANCE1">
+        <text lang="fa">بین کار و زندگی من تعادلی مناسب وجود دارد.</text>
+        <text lang="en">The balance between my work and private life is right for me</text>
+    </message>
+    <message id="WORK_BALANCE2">
+        <text lang="fa">سترس های ناشی از کار من قابل قبول هستند.</text>
+        <text lang="en">My work related stress is acceptable</text>
+    </message>
+    <message id="WORK_PROCESSES1">
+        <text lang="fa">روش ها و فرایندهای کار برای ما بطور روشن و واضح مشخص شده اند</text>
+        <text lang="en">We have clear-cut methods and procedures for doing our work</text>
+    </message>
+    <message id="WORK_TASKS1">
+        <text lang="fa">شغل من مار ا برای استفاده یکامل از دانش ومهارتم به چالش میکشد.</text>
+        <text lang="en">My work challenges me to use my knowledge and skills fully</text>
+    </message>
+    <message id="WORK_TASKS2">
+        <text lang="fa">تنوع کاری در مسئولیت های کاری من وجود دارد.</text>
+        <text lang="en">There is sufficient variety in my work tasks</text>
+    </message>
+    <message id="WORK_TASKS3">
+        <text lang="fa">احساس می کنم در موفقیت بل سهم برجسته دارم.</text>
+        <text lang="en">I feel I make a significant contribution to Bel's success</text>
+    </message>
+    <message id="WORK_TASKS4">
+        <text lang="fa">من میتوانم نظرات خود را بیان کنم حتی اگر نظراتم متفاوتبا نظر مدیرم باشد.</text>
+        <text lang="en">I have the freedom to express my views even though they might contradict the views of my superior</text>
+    </message>
+    <message id="WORK_TASKS5">
+        <text lang="fa">من از کار روزانه ام لذت میبرم.</text>
+        <text lang="en">I enjoy my daily work</text>
+    </message>
+    <message id="WORK_TASKS6">
+        <text lang="fa"> حجم کاری من قابل قبول است و به من اجازه می دهد وظایفم را به طور مناسب انجام دهم.</text>
+        <text lang="en">My workload is acceptable and allows me to do my job properly</text>
+    </message>
+    <message id="WORK_TASKS7">
+        <text lang="fa">حدود وطایف شغلی من به شکلی شفاف تعریف شده و مرا قادر می سازد مسئولست هایم را به خوبی درک کنم.</text>
+        <text lang="en">The organisation of my area of activity is clearly defined and enables me to understand my responsibilities</text>
+    </message>
+    <message id="WORK_TASKS8">
+        <text lang="fa">من می توانم در شغل خودم نوآوری داشته باشم.</text>
+        <text lang="en">I can take initiatives in my work</text>
+    </message>
+    <message id="EXPRESS">
+        <text lang="fa">نظرتان رابنویسید: دئست دارید شرکت چگومه شما را حمایت کند وانگیزه مند سازد تا عملکرد خود را بهبود بخشید</text>
+        <text lang="en">Express yourself: If you could change one thing about working for Bel, what would it be?</text>
+    </message>
+</messages>
