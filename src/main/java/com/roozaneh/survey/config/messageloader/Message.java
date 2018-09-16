@@ -20,35 +20,8 @@ public class Message {
 
     private static Messages inst;
 
-
-    static {
-        try {
-
-            File file = new File("src/main/resources/messages.xml");
-            JAXBContext jaxbContext = JAXBContext.newInstance(Messages.class);
-
-            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            inst = (Messages) jaxbUnmarshaller.unmarshal(file);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public static String getMessage(String id, String lang) {
-        for (Message message : inst.messages){
-            if (id.equals(message.id)){
-                return message.getText(lang);
-            }
-
-        }
-        return "";
-    }
-
     public String getText(String lang) {
-        System.out.println(texts.size());
         for (Text text : texts){
-            System.out.println(text.lang+"  "+text.value);
             if (lang.equals(text.lang)){
                 return text.value;
             }

@@ -2,6 +2,7 @@ package com.roozaneh.survey.domain;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,6 +20,7 @@ public class Survey {
     private Date createdDate;
     private Date startTime;
     private Date endTime;
+    private List<SurveyPart> surveyParts;
 
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
@@ -61,6 +63,16 @@ public class Survey {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @OneToMany
+    @JoinColumn(name = "survey_id")
+    public List<SurveyPart> getSurveyParts() {
+        return surveyParts;
+    }
+
+    public void setSurveyParts(List<SurveyPart> surveyParts) {
+        this.surveyParts = surveyParts;
     }
 
     @Override

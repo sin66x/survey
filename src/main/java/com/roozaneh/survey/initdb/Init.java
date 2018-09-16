@@ -92,6 +92,7 @@ public class Init {
             question.setText(st.split(",")[0]);
             question.setType(st.split(",")[1]);
             question.setSurveyPart(surveyPartRepository.findByTitle(st.split(",")[2]));
+            question.setInSurveyIndex(st.split(",")[3]);
             questionRepository.save(question);
         }
     }
