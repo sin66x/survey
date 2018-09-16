@@ -1,6 +1,6 @@
 package com.roozaneh.survey.domain;
 
-import javafx.scene.control.Tab;
+//import javafx.scene.control.Tab;
 
 import javax.persistence.*;
 
@@ -18,6 +18,7 @@ public class Question {
     private String text;
     private String type;
     private SurveyPart surveyPart;
+    private String inSurveyIndex;
 
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
@@ -56,5 +57,14 @@ public class Question {
 
     public void setSurveyPart(SurveyPart surveyPart) {
         this.surveyPart = surveyPart;
+    }
+
+    @Column(name="in_survey_index")
+    public String getInSurveyIndex() {
+        return inSurveyIndex;
+    }
+
+    public void setInSurveyIndex(String inSurveyIndex) {
+        this.inSurveyIndex = inSurveyIndex;
     }
 }
