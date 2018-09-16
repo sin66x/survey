@@ -1,5 +1,12 @@
 <messages>
-
+    <message id="HOME">
+        <text lang="fa">خانه</text>
+        <text lang="en">Home</text>
+    </message>
+    <message id="LOGOUT">
+        <text lang="fa">خروج</text>
+        <text lang="en">Logout</text>
+    </message>
     <message id="SURVEY_LIST">
         <text lang="fa">لیست نظرسنجی‌ها</text>
         <text lang="en">Surveys</text>
