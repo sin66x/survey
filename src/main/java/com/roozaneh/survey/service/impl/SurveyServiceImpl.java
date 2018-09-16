@@ -43,5 +43,11 @@ public class SurveyServiceImpl implements SurveyService {
         return surveyRepository.findAll();
     }
 
+    @Override
+    public List<Survey> findAllActive()
+    {
+        return surveyRepository.findAllActive();
+    }
+
 
 }
