@@ -4,15 +4,12 @@ package com.roozaneh.survey.controller;
 import com.roozaneh.survey.config.messageloader.Messages;
 import com.roozaneh.survey.domain.Result;
 import com.roozaneh.survey.domain.Survey;
-import com.roozaneh.survey.domain.SurveyPart;
 import com.roozaneh.survey.model.AnswerModel;
 import com.roozaneh.survey.model.SurveyFormModel;
-import com.roozaneh.survey.repository.ResultRepository;
 import com.roozaneh.survey.service.QuestionService;
 import com.roozaneh.survey.service.ResultService;
 import com.roozaneh.survey.service.SurveyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -38,12 +35,12 @@ public class SurveyController
     @RequestMapping(value = "/surveys", method = RequestMethod.GET)
     public String index(Model model, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
-        List<Survey> surveys = surveyService.findAll();
+        List<Survey> surveys = surveyService.findAllActive();
         model.addAttribute("surveys", surveys);
         model.addAttribute("messages", Messages.inst);
         model.addAttribute("lang", lang);
 
-        return  "surveys";
+        return "surveys";
     }
 
     @RequestMapping(value = "/survey", method = RequestMethod.GET)
@@ -82,7 +79,8 @@ public class SurveyController
 
             resultService.save(result);
         }
-        return "tt2";
+
+        return "redirect:surveys";
     }
 
 }

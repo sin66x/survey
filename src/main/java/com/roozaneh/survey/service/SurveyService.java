@@ -13,4 +13,7 @@ public interface SurveyService {
     boolean hasAccess(Survey survey);
 
     public List<Survey> findAll();
+
+    public List<Survey> findAllActive();
+
 }
