@@ -1,6 +1,7 @@
 package com.roozaneh.survey.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,6 +16,7 @@ public class SurveyPart {
     private int id;
     private String title;
     private Survey survey;
+    private List<Question> questions;
 
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
@@ -44,5 +46,15 @@ public class SurveyPart {
 
     public void setSurvey(Survey survey) {
         this.survey = survey;
+    }
+
+    @OneToMany
+    @JoinColumn(name = "survey_part_id")
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
     }
 }
