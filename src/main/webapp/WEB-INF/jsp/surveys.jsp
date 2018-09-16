@@ -15,7 +15,10 @@
 
 <body>
 
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp">
+    <jsp:param name="home_text" value="${messages.getMessage('HOME',lang)}"/>
+    <jsp:param name="logout_text" value="${messages.getMessage('LOGOUT',lang)}"/>
+</jsp:include>
 
 
 <div class="container">
