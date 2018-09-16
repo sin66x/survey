@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class SurveyServiceImpl implements SurveyService {
@@ -34,6 +35,12 @@ public class SurveyServiceImpl implements SurveyService {
         //TODO: user access to survey should be checked here
 
         return true;
+    }
+
+    @Override
+    public List<Survey> findAll()
+    {
+        return surveyRepository.findAll();
     }
 
 
