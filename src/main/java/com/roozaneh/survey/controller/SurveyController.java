@@ -12,6 +12,7 @@ import com.roozaneh.survey.service.QuestionService;
 import com.roozaneh.survey.service.ResultService;
 import com.roozaneh.survey.service.SurveyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class SurveyController
@@ -33,14 +35,25 @@ public class SurveyController
     @Autowired
     ResultService resultService;
 
-    @RequestMapping(value = "/survey", method = RequestMethod.GET)
-    public String loadPage(Model model,@RequestParam("sid") int surveyId,@RequestParam(name="lang",required = false,defaultValue = "en") String lang)
+    @RequestMapping(value = "/surveys", method = RequestMethod.GET)
+    public String index(Model model, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
-        Survey survey= surveyService.findById(surveyId);
-        model.addAttribute("survey",survey);
+        List<Survey> surveys = surveyService.findAll();
+        model.addAttribute("surveys", surveys);
+        model.addAttribute("messages", Messages.inst);
+        model.addAttribute("lang", lang);
+
+        return  "surveys";
+    }
+
+    @RequestMapping(value = "/survey", method = RequestMethod.GET)
+    public String loadPage(Model model, @RequestParam("sid") int surveyId, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
+    {
+        Survey survey = surveyService.findById(surveyId);
+        model.addAttribute("survey", survey);
 
         SurveyFormModel answerList = new SurveyFormModel();
-        model.addAttribute("answerList",answerList);
+        model.addAttribute("answerList", answerList);
 
         model.addAttribute("messages", Messages.inst);
         model.addAttribute("lang", lang);
@@ -55,10 +68,11 @@ public class SurveyController
     }
 
     @RequestMapping(value = "/survey", method = RequestMethod.POST)
-    public String save(@ModelAttribute("answerList")SurveyFormModel formResponse,@RequestParam("sid") int surveyId) {
+    public String save(@ModelAttribute("answerList") SurveyFormModel formResponse, @RequestParam("sid") int surveyId)
+    {
         //TODO: Check Access
 
-        for (AnswerModel answerModel: formResponse.getAnswers()){
+        for (AnswerModel answerModel : formResponse.getAnswers()) {
             Result result = new Result();
             result.setAnswer(answerModel.getAnswer());
             result.setCreatedDate(new Date());

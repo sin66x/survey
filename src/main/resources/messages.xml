@@ -1,4 +1,13 @@
 <messages>
+
+    <message id="SURVEY_LIST">
+        <text lang="fa">لیست نظرسنجی‌ها</text>
+        <text lang="en">Surveys</text>
+    </message>
+    <message id="NOT_FOUND_ITEMS">
+        <text lang="fa">آیتمی یافت نشد!</text>
+        <text lang="en">Not found items!</text>
+    </message>
     <message id="CAREER_OPORTUNITIES">
         <text lang="fa">Career Opportunity</text>
         <text lang="en">Career Opportunity</text>
