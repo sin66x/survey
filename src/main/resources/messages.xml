@@ -8,64 +8,64 @@
         <text lang="en">Communities</text>
     </message>
     <message id="COWORKERS">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Co-Workers</text>
+        <text lang="en">Co-Workers</text>
     </message>
     <message id="DIVERSITY">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Diversity</text>
+        <text lang="en">Diversity</text>
     </message>
     <message id="LEARNING">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Learning and Development</text>
+        <text lang="en">Learning and Development</text>
     </message>
     <message id="LOCAL">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Local Leadership</text>
+        <text lang="en">Local Leadership</text>
     </message>
     <message id="MANAGER">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Manager</text>
+        <text lang="en">Manager</text>
     </message>
     <message id="MANAGING">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Managing Performance</text>
+        <text lang="en">Managing Performance</text>
     </message>
     <message id="REPUTATION">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Organization Reputation</text>
+        <text lang="en">Organization Reputation</text>
     </message>
     <message id="PAY">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Pay</text>
+        <text lang="en">Pay</text>
     </message>
     <message id="RESOURCES">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Resources</text>
+        <text lang="en">Resources</text>
     </message>
     <message id="SAFTEY">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Safety</text>
+        <text lang="en">Safety</text>
     </message>
     <message id="SENIOR">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Senior Leadersip</text>
+        <text lang="en">Senior Leadersip</text>
     </message>
     <message id="VALUING">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Valuing People/Recognition</text>
+        <text lang="en">Valuing People/Recognition</text>
     </message>
     <message id="BALANCE">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Work/Life Balance</text>
+        <text lang="en">Work/Life Balance</text>
     </message>
     <message id="PROCESS">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Work Process</text>
+        <text lang="en">Work Process</text>
     </message>
     <message id="TASKS">
-        <text lang="fa">Engagement</text>
-        <text lang="en">Engagement</text>
+        <text lang="fa">Work Tasks</text>
+        <text lang="en">Work Tasks</text>
     </message>
 
     <message id="ENGAGEMENT">
@@ -111,7 +111,7 @@
         <text lang="en">Survey</text>
     </message>
     <message id="Q1">
-        <text lang="fa">کسی نمیتواند به آسانی من را از کار کردن در شرکت (BEL) منصرف کند."</text>
+        <text lang="fa">کسی نمیتواند به آسانی من را از کار کردن در شرکت (BEL) منصرف کند.</text>
         <text lang="en">It would take a lot to get me to leave Bel.</text>
     </message>
     <message id="Q2">
@@ -119,7 +119,7 @@
         <text lang="en">I would not hesitate to recommend Bel to a friend seeking employment</text>
     </message>
     <message id="Q3">
-        <text lang="fa">محیط کار در شرکت بل (BEL) منرا تشویق میکند که بهترین عملکرد را از خود نشان بدهم.</text>
+        <text lang="fa">محیط کار در شرکت بل (BEL) من را تشویق میکند که بهترین عملکرد را از خود نشان بدهم.</text>
         <text lang="en">Bel motivates me to do my utmost every day</text>
     </message>
     <message id="Q4">
@@ -144,15 +144,15 @@
     </message>
     <message id="Q9">
         <text lang="fa">من فکر میکنم شرکت بل (BEL) به نحوی منصفانه کارمندانش را ارتقا میدهد</text>
-        <text lang="en">I think the way Bel promotes people is </text>
+        <text lang="en">I think the way Bel promotes people is fair </text>
     </message>
     <message id="Q10">
         <text lang="fa">در شرکت بل (BEL) روزانه فرصت کافی برای رشد فردی یا انتقال بین واحدهای مختلف وجود دارد تاکارمند بتواند سطح حرفه ای خود را ارتقا بدهد.</text>
         <text lang="en">Bel provides opportunity for its employees to develop or to move between different functions/departments to enhance their career</text>
     </message>
     <message id="Q11">
-        <text lang="fa">در شرکت بل (BEL) فرصت¬های شغلی مختلف را در اختیار کارمندانش قرار میدهد.</text>
-        <text lang="en">The information I need is widely shared and available</text>
+        <text lang="fa">در شرکت بل (BEL) فرصتهای شغلی مختلف را در اختیار کارمندانش قرار میدهد.</text>
+        <text lang="en">I know which career opportunity are available to me</text>
     </message>
     <message id="Q12">
         <text lang="fa">اطلاعاتی که من برای انجام کارم نیاز دارم در دسترس است</text>
@@ -179,7 +179,7 @@
         <text lang="en">Bel strongly supports the learning and development of its employees</text>
     </message>
     <message id="Q18">
-        <text lang="fa">من در مورد فرصتهای آموزشی اطالعات کافی دریافت می کنم.</text>
+        <text lang="fa">من در مورد فرصتهای آموزشی اطلاعات کافی دریافت می کنم.</text>
         <text lang="en">I receive information about which training opportunities are available to me</text>
     </message>
     <message id="Q19">
@@ -191,7 +191,7 @@
         <text lang="en">I see strong evidence that Bel's local senior leadership is able to effectively lead the company</text>
     </message>
     <message id="Q21">
-        <text lang="fa">مدیران ارشد شرکت بل روزانه رویکرد و اهداف آینده را برای کارمندان توضیح می دهند و اطالع رسانی می کنند.</text>
+        <text lang="fa">مدیران ارشد شرکت بل روزانه رویکرد و اهداف آینده را برای کارمندان توضیح می دهند و اطلاع رسانی می کنند.</text>
         <text lang="en">Local senior leadership provides clear direction for the future</text>
     </message>
     <message id="Q22">
@@ -223,7 +223,7 @@
         <text lang="en">My manager develops a positive team atmosphere</text>
     </message>
     <message id="Q29">
-        <text lang="fa">من درک می کنم که چگونه اهداف فردی من در کارم با اهداف گروه بل  (BEL) مرتبط است.</text>
+        <text lang="fa">من درک می کنم که چگونه اهداف فردی من در کارم با اهداف گروه بل (BEL) مرتبط است.</text>
         <text lang="en">I understand how my personal objectives are linked to Bel's goals</text>
     </message>
     <message id="Q30">
@@ -247,7 +247,7 @@
         <text lang="en">I am sure that Bel does its best to be a responsible company (acting for the society, reducing its environmental impact, etc.).</text>
     </message>
     <message id="Q35">
-        <text lang="fa"></text>
+        <text lang="fa">من فرهنگ سازمانی، ارزشها و دیدگاههای شرکت بل (BEL) را می پسندم</text>
         <text lang="en">I appreciate Bel's culture, its mentality and its values</text>
     </message>
     <message id="Q36">
@@ -267,15 +267,15 @@
         <text lang="en">When Bel does well, I appropriately share in its financial success</text>
     </message>
     <message id="Q40">
-        <text lang="fa">برای بهترین بازدهی، ابزارهای مورد نیاز در اختیار من است.</text>
+        <text lang="fa">در مقایسه با شرکتهای دیگری که بتوانم در آنها کار کنم، احساس می کنم که پرداخت به من مناسب است.</text>
         <text lang="en">Compared with other places I might work, I feel I am paid appropriately</text>
     </message>
     <message id="Q41">
-        <text lang="fa"></text>
+        <text lang="fa">برای بهترین بازدهی، ابزارهای مورد نیاز در اختیار من است.</text>
         <text lang="en">I have what I need to be as efficient as possible</text>
     </message>
     <message id="Q42">
-        <text lang="fa">یمنی و امنیت محل کار در شرکت بل )BEL )موضوعی بسیار مهم می باشد</text>
+        <text lang="fa">ایمنی و امنیت محل کار در شرکت بل (BEL) موضوعی بسیار مهم می باشد</text>
         <text lang="en">Workplace safety and security are considered important at Bel</text>
     </message>
     <message id="Q43">
@@ -287,7 +287,7 @@
         <text lang="en">Bel Group's senior leadership make it clear that employees are critical to the organization’s success</text>
     </message>
     <message id="Q45">
-        <text lang="fa">مدیریت ارشد گروه بل، مسیری مشخصی بزای آینده فراهم می کنند.</text>
+        <text lang="fa">مدیریت ارشد گروه بل، مسیری مشخصی برای آینده فراهم می کنند.</text>
         <text lang="en">Bel Group's senior leadership provides clear direction for the future</text>
     </message>
     <message id="Q46">
@@ -315,7 +315,7 @@
         <text lang="en">The balance between my work and private life is right for me</text>
     </message>
     <message id="Q52">
-        <text lang="fa">سترس های ناشی از کار من قابل قبول هستند.</text>
+        <text lang="fa">استرس های ناشی از کار من قابل قبول هستند.</text>
         <text lang="en">My work related stress is acceptable</text>
     </message>
     <message id="Q53">
@@ -323,7 +323,7 @@
         <text lang="en">We have clear-cut methods and procedures for doing our work</text>
     </message>
     <message id="Q54">
-        <text lang="fa">شغل من مار ا برای استفاده یکامل از دانش ومهارتم به چالش میکشد.</text>
+        <text lang="fa">شغل من، ما را برای استفاده کامل از دانش  و مهارتم به چالش میکشد.</text>
         <text lang="en">My work challenges me to use my knowledge and skills fully</text>
     </message>
     <message id="Q55">
@@ -335,27 +335,27 @@
         <text lang="en">I feel I make a significant contribution to Bel's success</text>
     </message>
     <message id="Q57">
-        <text lang="fa">من میتوانم نظرات خود را بیان کنم حتی اگر نظراتم متفاوتبا نظر مدیرم باشد.</text>
+        <text lang="fa">من میتوانم نظرات خود را بیان کنم حتی اگر نظراتم متفاوت با نظر مدیرم باشد.</text>
         <text lang="en">I have the freedom to express my views even though they might contradict the views of my superior</text>
     </message>
-    <message id="Q60">
+    <message id="Q58">
         <text lang="fa">من از کار روزانه ام لذت میبرم.</text>
         <text lang="en">I enjoy my daily work</text>
     </message>
-    <message id="Q61">
+    <message id="Q59">
         <text lang="fa"> حجم کاری من قابل قبول است و به من اجازه می دهد وظایفم را به طور مناسب انجام دهم.</text>
         <text lang="en">My workload is acceptable and allows me to do my job properly</text>
     </message>
-    <message id="Q62">
+    <message id="Q60">
         <text lang="fa">حدود وطایف شغلی من به شکلی شفاف تعریف شده و مرا قادر می سازد مسئولست هایم را به خوبی درک کنم.</text>
         <text lang="en">The organisation of my area of activity is clearly defined and enables me to understand my responsibilities</text>
     </message>
-    <message id="Q63">
+    <message id="Q61">
         <text lang="fa">من می توانم در شغل خودم نوآوری داشته باشم.</text>
         <text lang="en">I can take initiatives in my work</text>
     </message>
-    <message id="Q64">
-        <text lang="fa">نظرتان رابنویسید: دئست دارید شرکت چگومه شما را حمایت کند وانگیزه مند سازد تا عملکرد خود را بهبود بخشید</text>
+    <message id="Q62">
+        <text lang="fa">نظرتان رابنویسید: دوست دارید شرکت چگونه شما را حمایت کند و انگیزه مند سازد تا عملکرد خود را بهبود بخشید</text>
         <text lang="en">Express yourself: If you could change one thing about working for Bel, what would it be?</text>
     </message>
 </messages>

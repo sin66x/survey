@@ -13,9 +13,9 @@ import java.text.ParseException;
 @SpringBootApplication
 public class SurveyApplication {
 
-//    @Autowired
-//    Init init;
-//
+    @Autowired
+    Init init;
+
 //    @PostConstruct
 //    private void initDb(){
 //        try {
