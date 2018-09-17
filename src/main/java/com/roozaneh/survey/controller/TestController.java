@@ -49,8 +49,11 @@ public class TestController {
     @RequestMapping(value = "/testjson", method = RequestMethod.GET)
     public @ResponseBody Object jsonTest() {
 //        model.addAttribute("name","Behnam");
+
         List<Object> objects = new ArrayList<>();
-        TestModel t = new TestModel("Kiri khan");
+        
+        TestModel t = new TestModel("Safari");
+
         objects.add(t);
         objects.add(t);
         objects.add(t);
