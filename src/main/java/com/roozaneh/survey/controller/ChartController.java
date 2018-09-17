@@ -35,8 +35,9 @@ public class ChartController {
     public @ResponseBody
     List<QuestionEngagement> questionEngagement() {
         return chartService.questionEngagement();
+    }
 
-      @RequestMapping(value = "/charts", method = RequestMethod.GET)
+    @RequestMapping(value = "/charts", method = RequestMethod.GET)
     public String questionRateLoadView(Model model,@RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
         model.addAttribute("messages", Messages.inst);
