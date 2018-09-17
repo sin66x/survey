@@ -2,6 +2,7 @@ package com.roozaneh.survey.controller;
 
 import com.roozaneh.survey.config.messageloader.Messages;
 import com.roozaneh.survey.domain.charts.PartRate;
+import com.roozaneh.survey.domain.charts.QuestionEngagement;
 import com.roozaneh.survey.domain.charts.QuestionRate;
 import com.roozaneh.survey.service.ChartService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,12 @@ public class ChartController {
         return chartService.partRate();
     }
 
-    @RequestMapping(value = "/charts", method = RequestMethod.GET)
+    @RequestMapping(value = "/question-engagement", method = RequestMethod.GET)
+    public @ResponseBody
+    List<QuestionEngagement> questionEngagement() {
+        return chartService.questionEngagement();
+
+      @RequestMapping(value = "/charts", method = RequestMethod.GET)
     public String questionRateLoadView(Model model,@RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
         model.addAttribute("messages", Messages.inst);

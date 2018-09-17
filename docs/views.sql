@@ -39,7 +39,7 @@ select COALESCE(sum(cnt),0) ss,
 	end as type
 from roozaneh.v_rate_per_question group by type
 )
-select (q2.ss/q1.sm)*100,q2.type from  q1,q2
+select row_number() over () as id,(q2.ss/q1.sm)*100 perc,q2.type from  q1,q2
 
 ---------------------------
 
