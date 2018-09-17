@@ -24,3 +24,22 @@ select row_number() over () as id,AVG(rate.avg),(COALESCE(SUM(cnt),0)/(COALESCE(
 	left join roozaneh.survey_parts sp
 		on q.survey_part_id = sp.id
 	group by q.survey_part_id,sp.title
+
+--------------------------
+
+create or replace view roozaneh.v_question_engagement as
+with q1 as (select sum(cnt) sm from roozaneh.v_rate_per_question ),
+q2 as (
+select COALESCE(sum(cnt),0) ss,
+	case
+		when avg<=2.25 then 'DISENGAED'
+		when avg>2.25 and avg<=3.5 then 'NOT ENGAGED'
+		when avg>3.5 and avg<=4.75 then 'NEARLY ENGAGED'
+		else 'ENGAGED'
+	end as type
+from roozaneh.v_rate_per_question group by type
+)
+select (q2.ss/q1.sm)*100,q2.type from  q1,q2
+
+---------------------------
+
