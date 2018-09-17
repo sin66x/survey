@@ -9,11 +9,21 @@ const QuestionRateChart = (function (window) {
 
         // generate dataset from models
 
+        var labelColors = [
+            "Red", "Blue", "Yellow", "Green", "Purple", "Orange"
+        ],
+        labels = [];
+
+        for (var i = 0; i < data.length; i++) {
+            var randomNumber = Math.floor(Math.random() * 5);
+            var color = labelColors[randomNumber];
+            labels.push(color);
+        }
 
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: labels,
                 datasets: [{
                     label: '# of Votes',
                     data: data,
@@ -60,8 +70,6 @@ const QuestionRateChart = (function (window) {
 (function ($, QuestionRateChart) {
 
     $(function () {
-
-        console.log(typeof null);
 
         const request = $.ajax({
             url: '/question-rate'

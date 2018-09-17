@@ -28,7 +28,7 @@
         <div class="col">
 
             <div class="card">
-                <div class="card-header">چارت</div>
+                <div class="card-header">${messages.getMessage("QUESTION_RATE_CHART", lang)}</div>
                 <div class="card-body">
                     <canvas id="question-rate" width="800" height="400"></canvas>
                 </div>
@@ -42,7 +42,7 @@
         <div class="col">
 
             <div class="card">
-                <div class="card-header">چارت</div>
+                <div class="card-header">${messages.getMessage("PART_RATE_CHART", lang)}</div>
                 <div class="card-body">
                     <canvas id="part-rate" width="800" height="400"></canvas>
                 </div>
@@ -60,7 +60,6 @@
 
 <jsp:include page="../partials/bootstrapScripts.jsp"/>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-<script type="text/javascript" src="/js/questionRate/QuestionRateModel.js"></script>
 <script type="text/javascript" src="/js/questionRate/questionRateController.js"></script>
 <script type="text/javascript" src="/js/questionRate/partRateController.js"></script>
 

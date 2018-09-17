@@ -7,25 +7,21 @@ const PartRateChart = (function (window) {
         var ctx = document.getElementById(questionCanvasId).getContext('2d');
 
 
-        // generate dataset from models
+        var labelColors = [
+                "Red", "Blue", "Yellow", "Green", "Purple", "Orange"
+            ],
+            labels = [];
 
+        for (var i = 0; i < data.length; i++) {
+            var randomNumber = Math.floor(Math.random() * 5);
+            var color = labelColors[randomNumber];
+            labels.push(color);
+        }
 
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: [
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
-                    "Red", "Blue"
-                ],
+                labels: labels,
                 datasets: [{
                     label: '# of Votes',
                     data: data,
@@ -73,8 +69,6 @@ const PartRateChart = (function (window) {
 
     $(function () {
 
-        console.log(typeof null);
-
         const request = $.ajax({
             url: '/part-rate'
         });
@@ -84,7 +78,7 @@ const PartRateChart = (function (window) {
             var result = [];
 
             $.each(response, function (index, partRate) {
-                result.push(partRate.average);
+                result.push(partRate.answeredPercentage);
             });
 
             console.log(result);
