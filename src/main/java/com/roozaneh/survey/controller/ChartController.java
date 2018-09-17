@@ -1,6 +1,7 @@
 package com.roozaneh.survey.controller;
 
 import com.roozaneh.survey.domain.charts.PartRate;
+import com.roozaneh.survey.domain.charts.QuestionEngagement;
 import com.roozaneh.survey.domain.charts.QuestionRate;
 import com.roozaneh.survey.service.ChartService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,11 @@ public class ChartController {
     public @ResponseBody
     List<PartRate> partRate() {
         return chartService.partRate();
+    }
+
+    @RequestMapping(value = "/question-engagement", method = RequestMethod.GET)
+    public @ResponseBody
+    List<QuestionEngagement> questionEngagement() {
+        return chartService.questionEngagement();
     }
 }
