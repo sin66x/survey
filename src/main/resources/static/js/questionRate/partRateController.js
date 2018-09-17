@@ -1,6 +1,6 @@
-const QuestionRateChart = (function (window) {
+const PartRateChart = (function (window) {
 
-    const questionCanvasId = "question-rate"
+    const questionCanvasId = "part-rate";
 
     var generate = function (data) {
 
@@ -13,7 +13,19 @@ const QuestionRateChart = (function (window) {
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: [
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange",
+                    "Red", "Blue"
+                ],
                 datasets: [{
                     label: '# of Votes',
                     data: data,
@@ -57,25 +69,26 @@ const QuestionRateChart = (function (window) {
 
 })(window);
 
-(function ($, QuestionRateChart) {
+(function ($, PartRateChart) {
 
     $(function () {
 
         console.log(typeof null);
 
         const request = $.ajax({
-            url: '/question-rate'
+            url: '/part-rate'
         });
 
         request.done(function (response) {
 
             var result = [];
 
-            $.each(response, function (index, item) {
-                result.push(item.average);
+            $.each(response, function (index, partRate) {
+                result.push(partRate.average);
             });
 
-            QuestionRateChart.generate(result);
+            console.log(result);
+            PartRateChart.generate(result);
 
         });
 
@@ -85,4 +98,4 @@ const QuestionRateChart = (function (window) {
 
     });
 
-})(window.jQuery, QuestionRateChart);
+})(window.jQuery, PartRateChart);

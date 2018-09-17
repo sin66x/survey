@@ -24,17 +24,34 @@
 <div class="container">
 
     <div class="row my-5">
+
         <div class="col">
 
             <div class="card">
                 <div class="card-header">چارت</div>
                 <div class="card-body">
-                    <canvas id="question-rate" width="400" height="400"></canvas>
+                    <canvas id="question-rate" width="800" height="400"></canvas>
                 </div>
 
 
             </div>
         </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col">
+
+            <div class="card">
+                <div class="card-header">چارت</div>
+                <div class="card-body">
+                    <canvas id="part-rate" width="800" height="400"></canvas>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
     </div>
 
 
@@ -45,6 +62,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script type="text/javascript" src="/js/questionRate/QuestionRateModel.js"></script>
 <script type="text/javascript" src="/js/questionRate/questionRateController.js"></script>
+<script type="text/javascript" src="/js/questionRate/partRateController.js"></script>
 
 </body>
 </html>
