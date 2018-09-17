@@ -28,4 +28,10 @@ public class ChartController {
     List<PartRate> partRate() {
         return chartService.partRate();
     }
+
+    @RequestMapping(value = "/charts", method = RequestMethod.GET)
+    public String questionRateLoadView()
+    {
+        return "charts/questionRate";
+    }
 }
