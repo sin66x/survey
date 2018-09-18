@@ -1,15 +1,18 @@
 package com.roozaneh.survey.repository;
 
+import com.roozaneh.survey.domain.Survey;
+import com.roozaneh.survey.domain.User;
+import com.roozaneh.survey.domain.UserSurvey;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import com.roozaneh.survey.domain.Result;
-/**
- * Created with IntelliJ IDEA.
- * User: Asus
- * Date: 9/14/18
- * Time: 2:28 AM
- * To change this template use File | Settings | File Templates.
- */
+
+import java.util.List;
+
 @Repository
 public interface ResultRepository extends JpaRepository<Result, Integer> {
+    @Query(value = "SELECT r FROM Result r WHERE r.user=?1 and r.question.surveyPart.survey=?2")
+    List<Result> findByUserAndSurvey(User user, Survey survey);
+
 }
