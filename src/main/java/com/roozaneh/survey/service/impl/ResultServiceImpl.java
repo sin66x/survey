@@ -6,6 +6,8 @@ import com.roozaneh.survey.service.ResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ResultServiceImpl implements ResultService {
     @Autowired
@@ -13,5 +15,15 @@ public class ResultServiceImpl implements ResultService {
     @Override
     public void save(Result result) {
         resultRepository.save(result);
+    }
+
+    @Override
+    public List<Result> findAll() {
+        return resultRepository.findAll();
+    }
+
+    @Override
+    public List<Result> findAllTextAnswers() {
+        return resultRepository.findAllTextAnswers();
     }
 }
