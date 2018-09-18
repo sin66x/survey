@@ -12,6 +12,4 @@ public interface SurveyRepository extends JpaRepository<Survey,Integer> {
 
     public Survey findByTitle(String s);
 
-    @Query(value = "SELECT s FROM Survey s WHERE CURRENT_DATE >= s.startTime AND s.endTime >= CURRENT_DATE")
-    public List<Survey> findAllActive();
 }

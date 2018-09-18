@@ -9,7 +9,10 @@ import com.roozaneh.survey.model.SurveyFormModel;
 import com.roozaneh.survey.service.QuestionService;
 import com.roozaneh.survey.service.ResultService;
 import com.roozaneh.survey.service.SurveyService;
+import com.roozaneh.survey.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -27,15 +30,12 @@ public class SurveyController
     SurveyService surveyService;
 
     @Autowired
-    QuestionService questionService;
-
-    @Autowired
     ResultService resultService;
 
     @RequestMapping(value = "/surveys", method = RequestMethod.GET)
     public String index(Model model, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
-        List<Survey> surveys = surveyService.findAllActive();
+        List<Survey> surveys = surveyService.findByUser();
         model.addAttribute("surveys", surveys);
         model.addAttribute("messages", Messages.inst);
         model.addAttribute("lang", lang);
@@ -47,6 +47,9 @@ public class SurveyController
     public String loadPage(Model model, @RequestParam("sid") int surveyId, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
         Survey survey = surveyService.findById(surveyId);
+        if (resultService.isVoted(survey)||resultService.isExpired(survey)||resultService.isNotYet(survey))
+            return "redirect:surveys";
+
         model.addAttribute("survey", survey);
 
         SurveyFormModel answerList = new SurveyFormModel();
@@ -55,30 +58,19 @@ public class SurveyController
         model.addAttribute("messages", Messages.inst);
         model.addAttribute("lang", lang);
 
-        //TODO: Check Access
-//        if (surveyService.hasAccess(survey))
-//        {}
-//        else
-//        {}
+        if (surveyService.hasAccess(survey))
+            return "survey";
+        else
+            return "surveys";
 
-        return "survey";
     }
 
     @RequestMapping(value = "/survey", method = RequestMethod.POST)
     public String save(@ModelAttribute("answerList") SurveyFormModel formResponse, @RequestParam("sid") int surveyId)
     {
-        //TODO: Check Access
+        if (surveyService.hasAccess(surveyId) && !resultService.isVoted(surveyId))
+            resultService.save(formResponse.getAnswers());
 
-        for (AnswerModel answerModel : formResponse.getAnswers()) {
-            Result result = new Result();
-            result.setAnswer(answerModel.getAnswer());
-            result.setCreatedDate(new Date());
-            result.setQuestion(questionService.findById(answerModel.getQuestionId()));
-            //TODO: set user
-            //result.setUser();
-
-            resultService.save(result);
-        }
 
         return "redirect:surveys";
     }

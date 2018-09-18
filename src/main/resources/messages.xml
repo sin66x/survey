@@ -1,4 +1,25 @@
 <messages>
+    <message id="VOTED">
+        <text lang="fa">رای داده شد</text>
+        <text lang="en">Voted</text>
+    </message>
+    <message id="EXPIRED">
+        <text lang="fa">پایان یافت</text>
+        <text lang="en">Expired</text>
+    </message>
+    <message id="COMING_SOON">
+        <text lang="fa">به زودی</text>
+        <text lang="en">Coming Soon</text>
+    </message>
+
+    <message id="PART_RATE_CHART">
+        <text lang="fa">نمودار دسته‌بندی‌ها</text>
+        <text lang="en">Category Chart</text>
+    </message>
+    <message id="QUESTION_RATE_CHART">
+        <text lang="fa">نمودار پرسش‌ها</text>
+        <text lang="en">Questions Chart</text>
+    </message>
     <message id="HOME">
         <text lang="fa">خانه</text>
         <text lang="en">Home</text>

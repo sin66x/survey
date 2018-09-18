@@ -1,6 +1,7 @@
 package com.roozaneh.survey.service.impl;
 
 import com.roozaneh.survey.domain.charts.PartRate;
+import com.roozaneh.survey.domain.charts.QuestionEngagement;
 import com.roozaneh.survey.domain.charts.QuestionRate;
 import com.roozaneh.survey.service.ChartService;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,10 @@ public class ChartServiceImpl implements ChartService {
     @Override
     public List<PartRate> partRate() {
         return entityManager.createNativeQuery("select * from roozaneh.v_rate_per_part",PartRate.class).getResultList();
+    }
+
+    @Override
+    public List<QuestionEngagement> questionEngagement() {
+        return entityManager.createNativeQuery("select * from roozaneh.v_question_engagement",QuestionEngagement.class).getResultList();
     }
 }
