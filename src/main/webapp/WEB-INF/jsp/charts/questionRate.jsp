@@ -52,7 +52,23 @@
         </div>
     </div>
 
+    <div class="row my-5">
+
+        <div class="col">
+
+            <div class="card">
+                <div class="card-header">${messages.getMessage("QUESTION_RATE_CHART", lang)}</div>
+                <div class="card-body">
+                </div>
+                <canvas id="question-engagement" width="800" height="400"></canvas>
+
+
+            </div>
+        </div>
     </div>
+
+
+</div>
 
 
 </div>
@@ -62,6 +78,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script type="text/javascript" src="/js/questionRate/questionRateController.js"></script>
 <script type="text/javascript" src="/js/questionRate/partRateController.js"></script>
+<script type="text/javascript" src="/js/questionRate/questionEngagement.js"></script>
 
 </body>
 </html>
