@@ -1,6 +1,6 @@
-const PartRateChart = (function (window) {
+const QuestionEngagementChart = (function (window) {
 
-    const questionCanvasId = "part-rate";
+    const questionCanvasId = "question-engagement";
 
     var generate = function (data) {
 
@@ -19,7 +19,7 @@ const PartRateChart = (function (window) {
         }
 
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'pie',
             data: {
                 labels: labels,
                 datasets: [{
@@ -65,30 +65,32 @@ const PartRateChart = (function (window) {
 
 })(window);
 
-(function ($, PartRateChart) {
 
-    $(function () {
 
-        const request = $.ajax({
-            url: '/part-rate'
-        });
+(function ($ , QuestionEngagementChart) {
 
-        request.done(function (response) {
 
-            var result = [];
+    const request = $.ajax({
+        url: '/question-engagement'
+    })
 
-            $.each(response, function (index, partRate) {
-                result.push(partRate.answeredPercentage);
-            });
 
-            PartRateChart.generate(result);
+    request.done(function (response) {
+        var result = [];
+        $.each(response, function (index, item) {
 
-        });
+            var engagement = item.percentage;
+            /*var engagement = {
+                percentage: item.percentage,
+                type: item.type
+            }*/
 
-        request.fail(function (response) {
-            console.log(response)
+            result.push(engagement);
+
+            QuestionEngagementChart.generate(result);
+
         })
+    })
 
-    });
 
-})(window.jQuery, PartRateChart);
+})(window.jQuery, QuestionEngagementChart)
