@@ -13,6 +13,7 @@ public class User {
     private String isActive;
     private Date createdDate;
 
+    public User(){}
     public User(String username, String password,String role, String isActive) {
         this.username = username;
         this.password = password;

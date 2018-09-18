@@ -42,7 +42,20 @@
                             <c:forEach items="${surveys}" var="survey">
 
                                 <li class="list-group-item">
-                                    <a href="/survey?sid=${survey.id}&lang=${lang}">${messages.getMessage(survey.title,lang)}</a>
+                                    <c:choose>
+                                        <c:when test="${!survey.voted && !survey.expired && !survey.notYet}">
+                                            <a href="/survey?sid=${survey.id}&lang=${lang}">${messages.getMessage(survey.title,lang)}</a>
+                                        </c:when>
+                                        <c:when test="${survey.voted}">
+                                            <label>${messages.getMessage(survey.title,lang)} - ${messages.getMessage('VOTED',lang)}</label>
+                                        </c:when>
+                                        <c:when test="${survey.expired}">
+                                            <label>${messages.getMessage(survey.title,lang)} - ${messages.getMessage('EXPIRED',lang)}</label>
+                                        </c:when>
+                                        <c:when test="${survey.notYet}">
+                                            <label>${messages.getMessage(survey.title,lang)} - ${messages.getMessage('COMING_SOON',lang)}</label>
+                                        </c:when>
+                                    </c:choose>
                                 </li>
 
 

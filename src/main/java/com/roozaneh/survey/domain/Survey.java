@@ -21,6 +21,9 @@ public class Survey {
     private Date startTime;
     private Date endTime;
     private List<SurveyPart> surveyParts;
+    private boolean isExpired;
+    private boolean isVoted;
+    private boolean isNotYet;
 
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE)
@@ -73,6 +76,33 @@ public class Survey {
 
     public void setSurveyParts(List<SurveyPart> surveyParts) {
         this.surveyParts = surveyParts;
+    }
+
+    @Transient
+    public boolean isExpired() {
+        return isExpired;
+    }
+
+    public void setExpired(boolean expired) {
+        isExpired = expired;
+    }
+
+    @Transient
+    public boolean isVoted() {
+        return isVoted;
+    }
+
+    public void setVoted(boolean voted) {
+        isVoted = voted;
+    }
+
+    @Transient
+    public boolean isNotYet() {
+        return isNotYet;
+    }
+
+    public void setNotYet(boolean notYet) {
+        isNotYet = notYet;
     }
 
     @Override

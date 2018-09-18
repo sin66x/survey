@@ -1,11 +1,7 @@
 package com.roozaneh.survey.initdb;
 
-import com.roozaneh.survey.domain.Question;
-import com.roozaneh.survey.domain.Survey;
-import com.roozaneh.survey.domain.SurveyPart;
-import com.roozaneh.survey.repository.QuestionRepository;
-import com.roozaneh.survey.repository.SurveyPartRepository;
-import com.roozaneh.survey.repository.SurveyRepository;
+import com.roozaneh.survey.domain.*;
+import com.roozaneh.survey.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,13 +12,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Asus
- * Date: 9/14/18
- * Time: 2:52 AM
- * To change this template use File | Settings | File Templates.
- */
 @Service
 public class Init {
     @Autowired
@@ -34,9 +23,15 @@ public class Init {
     @Autowired
     QuestionRepository questionRepository;
 
+    @Autowired
+    UserSurveyRepository userSurveyRepository;
+
+    @Autowired
+    UserRepository userRepository;
+
     public static void main(String[] args) throws IOException, ParseException {
         Init init = new Init();
-        init.makeSurveys();
+        init.giveAllSurveyAccessToAdmin();
     }
 
     public void makeSurveys() throws IOException, ParseException {
@@ -57,10 +52,6 @@ public class Init {
 
     }
 
-    public void deleteSurveys() {
-        surveyRepository.deleteAll();
-    }
-
     public void makeSurveyParts() throws IOException, ParseException {
         File file = new File(getClass().getClassLoader().getResource("initdata/survey-parts.csv").getFile());
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -75,10 +66,6 @@ public class Init {
             surveyPartRepository.save(surveyPart);
 
         }
-    }
-
-    public void deleteSurveyParts() {
-        surveyPartRepository.deleteAll();
     }
 
     public void makeQuestions() throws IOException, ParseException {
@@ -96,8 +83,17 @@ public class Init {
             questionRepository.save(question);
         }
     }
-    public  void deleteQuestions(){
-        questionRepository.deleteAll();
+
+    public void giveAllSurveyAccessToAdmin(){
+        User user = userRepository.findByUsername("admin");
+        List<Survey> surveys = surveyRepository.findAll();
+        for (Survey survey : surveys) {
+            UserSurvey userSurvey = new UserSurvey();
+            userSurvey.setSurvey(survey);
+            userSurvey.setUser(user);
+            if (userSurveyRepository.findByUserAndSurvey(user,survey)==null)
+                userSurveyRepository.saveAndFlush(userSurvey);
+        }
     }
 }
 
