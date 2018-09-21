@@ -1,4 +1,8 @@
 <messages>
+    <message id="RESULTS">
+        <text lang="fa">نتایج</text>
+        <text lang="en">Results</text>
+    </message>
     <message id="SHOW_RESULTS">
         <text lang="fa">مشاهده نتایج</text>
         <text lang="en">Show Results</text>
