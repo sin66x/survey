@@ -3,7 +3,9 @@
     <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Roozaneh</a>
+        <a class="navbar-brand" href="#">
+            <img src="/images/logo-en.svg" width="60" height="60" alt="">
+        </a>
 
         <button class="navbar-toggler"
                 type="button"
