@@ -29,10 +29,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void createUser(String username, String password, String role) {
+    public User createUser(String username, String password, String role) {
         User user = new User(username,
                 passwordEncoder.encode(password)
                 ,"ROLE_"+role,"true");
         userRepository.saveAndFlush(user);
+        return user;
     }
 }
