@@ -44,7 +44,7 @@ public class SurveyApplication {
                 e.printStackTrace();
             }
         }
-
+        init.createFakeUsers(100);
 
 
     }

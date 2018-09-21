@@ -7,5 +7,5 @@ public interface UserService {
 
     User findByUsername(String username);
 
-    void createUser(String username, String password, String role);
+    User createUser(String username, String password, String role);
 }

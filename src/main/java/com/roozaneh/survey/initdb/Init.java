@@ -2,6 +2,7 @@ package com.roozaneh.survey.initdb;
 
 import com.roozaneh.survey.domain.*;
 import com.roozaneh.survey.repository.*;
+import com.roozaneh.survey.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,10 +30,8 @@ public class Init {
     @Autowired
     UserRepository userRepository;
 
-    public static void main(String[] args) throws IOException, ParseException {
-        Init init = new Init();
-        init.giveAllSurveyAccessToAdmin();
-    }
+    @Autowired
+    UserService userService;
 
     public void makeSurveys() throws IOException, ParseException {
         File file = new File(getClass().getClassLoader().getResource("initdata/survey.csv").getFile());
@@ -93,6 +92,22 @@ public class Init {
             userSurvey.setUser(user);
             if (userSurveyRepository.findByUserAndSurvey(user,survey)==null)
                 userSurveyRepository.saveAndFlush(userSurvey);
+        }
+    }
+
+    public void createFakeUsers(int num){
+        for (int i=1;i<=num;i++) {
+            User user = userRepository.findByUsername("user"+i);
+            if (user == null) {
+                user = userService.createUser("user"+i,"user"+i,"USER");
+                List<Survey> surveys = surveyRepository.findAll();
+                for (Survey survey : surveys) {
+                    UserSurvey userSurvey = new UserSurvey();
+                    userSurvey.setUser(user);
+                    userSurvey.setSurvey(survey);
+                    userSurveyRepository.saveAndFlush(userSurvey);
+                }
+            }
         }
     }
 }

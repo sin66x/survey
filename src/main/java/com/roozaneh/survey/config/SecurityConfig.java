@@ -47,9 +47,23 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().requireCsrfProtectionMatcher(new AntPathRequestMatcher("**/login")).and().authorizeRequests()
-                .antMatchers("/surveys").hasRole("ADMIN").and().formLogin().defaultSuccessUrl("/surveys")
-                .loginPage("/login").and().logout().permitAll();
+        http.csrf().requireCsrfProtectionMatcher(
+                new AntPathRequestMatcher("**/login"))
+                .and()
+                .authorizeRequests()
+                .antMatchers("/charts")
+                .hasRole("ADMIN")
+                .and()
+                .formLogin()
+                .defaultSuccessUrl("/surveys")
+                .loginPage("/login")
+                .and()
+                .logout()
+                .permitAll()
+                .and()
+                .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/login");;
     }
 
 }
