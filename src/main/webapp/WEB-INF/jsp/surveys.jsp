@@ -2,6 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <html>
 <head>
     <%@ page contentType="text/html; charset=UTF-8" %>
@@ -19,6 +20,19 @@
     <jsp:param name="home_text" value="${messages.getMessage('HOME',lang)}"/>
     <jsp:param name="logout_text" value="${messages.getMessage('LOGOUT',lang)}"/>
 </jsp:include>
+
+<%!
+public boolean isAdmin(ServletRequest request) {
+    java.util.Collection<org.springframework.security.core.authority.SimpleGrantedAuthority> authorities =
+            (java.util.Collection<org.springframework.security.core.authority.SimpleGrantedAuthority>)    org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+    for (org.springframework.security.core.authority.SimpleGrantedAuthority authority: authorities)
+    {
+        if (authority.toString().equals("ROLE_ADMIN"))
+            return true;
+    }
+    return false;
+}
+%>
 
 
 <div class="container">
@@ -56,6 +70,9 @@
                                             <label>${messages.getMessage(survey.title,lang)} - ${messages.getMessage('COMING_SOON',lang)}</label>
                                         </c:when>
                                     </c:choose>
+                                    <% if(isAdmin(request)) { %>
+                                        - <a href="/charts?lang=${lang}">${messages.getMessage('SHOW_RESULTS',lang)}</a>
+                                    <% } %>
                                 </li>
 
 

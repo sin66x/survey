@@ -1,4 +1,8 @@
 <messages>
+    <message id="SHOW_RESULTS">
+        <text lang="fa">مشاهده نتایج</text>
+        <text lang="en">Show Results</text>
+    </message>
     <message id="VOTED">
         <text lang="fa">رای داده شد</text>
         <text lang="en">Voted</text>

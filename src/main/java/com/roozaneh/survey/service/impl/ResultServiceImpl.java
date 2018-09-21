@@ -81,4 +81,14 @@ public class ResultServiceImpl implements ResultService {
     public boolean isNotYet(Survey survey) {
         return survey.getStartTime().after(new Date());
     }
+
+    @Override
+    public List<Result> findAll() {
+        return resultRepository.findAll();
+    }
+
+    @Override
+    public List<Result> findAllTextAnswers() {
+        return resultRepository.findAllTextAnswers();
+    }
 }

@@ -2,45 +2,66 @@ const PartRateChart = (function (window) {
 
     const questionCanvasId = "part-rate";
 
+    var getRandomColor = function () {
+
+        var colors = [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ];
+
+        var borders = [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ];
+
+        var randomNumber = Math.floor(Math.random() * 5);
+
+        return {
+            color: colors[randomNumber],
+            border: borders[randomNumber]
+        };
+
+    };
+
     var generate = function (data) {
 
         var ctx = document.getElementById(questionCanvasId).getContext('2d');
 
 
-        var labelColors = [
-                "Red", "Blue", "Yellow", "Green", "Purple", "Orange"
-            ],
-            labels = [];
+        var labels = [];
+        var backgroundColor = [];
+        var borderColor = [];
+        var sanitizeData = [];
 
-        for (var i = 0; i < data.length; i++) {
-            var randomNumber = Math.floor(Math.random() * 5);
-            var color = labelColors[randomNumber];
-            labels.push(color);
-        }
+        data.forEach(function (item) {
+
+            var colorObject = getRandomColor();
+
+            backgroundColor.push(colorObject.color);
+            borderColor.push(colorObject.border);
+            labels.push(item.partTitle);
+            sanitizeData.push(item.average);
+
+        });
+
 
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '# of Votes',
-                    data: data,
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
+                    label: '# of Part Rate',
+                    data: sanitizeData,
+                    backgroundColor: backgroundColor,
+                    borderColor: borderColor,
                     borderWidth: 1
                 }]
             },
@@ -78,7 +99,7 @@ const PartRateChart = (function (window) {
             var result = [];
 
             $.each(response, function (index, partRate) {
-                result.push(partRate.answeredPercentage);
+                result.push(partRate);
             });
 
             PartRateChart.generate(result);

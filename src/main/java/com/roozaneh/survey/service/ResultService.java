@@ -6,7 +6,8 @@ import com.roozaneh.survey.model.AnswerModel;
 
 import java.util.List;
 
-public interface ResultService {
+public interface ResultService
+{
 
     void save(Result result);
 
@@ -19,4 +20,8 @@ public interface ResultService {
     boolean isExpired(Survey survey);
 
     boolean isNotYet(Survey survey);
+
+    public List<Result> findAll();
+
+    public List<Result> findAllTextAnswers();
 }

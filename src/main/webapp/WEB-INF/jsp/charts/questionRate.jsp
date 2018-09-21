@@ -71,7 +71,6 @@
 </div>
 
 
-</div>
 
 
 <jsp:include page="../partials/bootstrapScripts.jsp"/>
