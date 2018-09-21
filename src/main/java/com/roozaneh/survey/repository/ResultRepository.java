@@ -15,4 +15,6 @@ public interface ResultRepository extends JpaRepository<Result, Integer> {
     @Query(value = "SELECT r FROM Result r WHERE r.user=?1 and r.question.surveyPart.survey=?2")
     List<Result> findByUserAndSurvey(User user, Survey survey);
 
+    @Query("SELECT r from Result r where r.answer is not null and trim(r.answer) <> '' and r.question.type='DES'")
+    public List<Result> findAllTextAnswers();
 }

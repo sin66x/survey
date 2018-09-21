@@ -15,17 +15,14 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
-public class SurveyController
-{
+public class SurveyController {
     @Autowired
     SurveyService surveyService;
 
@@ -44,8 +41,7 @@ public class SurveyController
     }
 
     @RequestMapping(value = "/survey", method = RequestMethod.GET)
-    public String loadPage(Model model, @RequestParam("sid") int surveyId, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
-    {
+    public String loadPage(Model model, @RequestParam("sid") int surveyId, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang) {
         Survey survey = surveyService.findById(surveyId);
         if (resultService.isVoted(survey)||resultService.isExpired(survey)||resultService.isNotYet(survey))
             return "redirect:surveys";
@@ -73,6 +69,18 @@ public class SurveyController
 
 
         return "redirect:surveys";
+    }
+
+    @RequestMapping(value = "/survey/{id}/results", method = RequestMethod.GET)
+    public String results(Model model, @PathVariable("id") Optional<String> surveyId) {
+        if (!surveyId.isPresent()) {
+            //ToDo:add404
+            System.out.println("not found sid...............");
+        }
+        List<Result> results = resultService.findAllTextAnswers();
+        model.addAttribute("results", results);
+
+        return "survey/results";
     }
 
 }

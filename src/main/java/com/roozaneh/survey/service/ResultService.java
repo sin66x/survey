@@ -19,4 +19,7 @@ public interface ResultService {
     boolean isExpired(Survey survey);
 
     boolean isNotYet(Survey survey);
+    public void save(Result result);
+    public List<Result> findAll();
+    public List<Result> findAllTextAnswers();
 }
