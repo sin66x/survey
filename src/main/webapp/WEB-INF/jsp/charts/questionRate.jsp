@@ -68,6 +68,22 @@
     </div>
 
 
+    <div class="row my-5">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">${messages.getMessage("RESULTS", lang)}</div>
+                <ul class="list-group list-group-flush">
+                    <c:forEach items="${textAnswers}" var="result">
+                        <li class="list-group-item">${result.answer}</li>
+                    </c:forEach>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+
 </div>
 
 
