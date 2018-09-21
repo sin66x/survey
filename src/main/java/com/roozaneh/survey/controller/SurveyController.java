@@ -11,6 +11,7 @@ import com.roozaneh.survey.service.ResultService;
 import com.roozaneh.survey.service.SurveyService;
 import com.roozaneh.survey.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,8 @@ public class SurveyController {
     @Autowired
     ResultService resultService;
 
+
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @RequestMapping(value = "/surveys", method = RequestMethod.GET)
     public String index(Model model, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang)
     {
@@ -40,6 +43,7 @@ public class SurveyController {
         return "surveys";
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @RequestMapping(value = "/survey", method = RequestMethod.GET)
     public String loadPage(Model model, @RequestParam("sid") int surveyId, @RequestParam(name = "lang", required = false, defaultValue = "en") String lang) {
         Survey survey = surveyService.findById(surveyId);
@@ -61,6 +65,7 @@ public class SurveyController {
 
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @RequestMapping(value = "/survey", method = RequestMethod.POST)
     public String save(@ModelAttribute("answerList") SurveyFormModel formResponse, @RequestParam("sid") int surveyId)
     {
